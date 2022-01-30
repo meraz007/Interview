@@ -10,35 +10,7 @@
         </div>
         <!-- Modal -->
           <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add an Account</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                      <label>Account Type</label>
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                      </select>
-                      <label>Account Name</label>
-                      <input type="text" class="form-control">
-                      <label>Account ID</label>
-                      <input type="number" class="form-control">
-                      <label>Description</label>
-                      <textarea class="form-control" cols="30" rows="5"></textarea>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Save</button>
-                </div>
-              </div>
-            </div>
+            <Modal />
           </div>
       </div>
     <p>
@@ -69,35 +41,7 @@
               <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
             </svg>
           </h4>
-         <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-</table>
+          <Table />
         </div>
       </div>
     </div>
@@ -105,10 +49,13 @@
 </template>
 
 <script>
-
+import Table from '../components/table.vue'
+import Modal from '../components/Modal.vue'
 export default {
   name: 'Home',
   components: {
+    Table,
+    Modal
     
   }
 }
